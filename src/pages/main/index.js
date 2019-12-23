@@ -2,6 +2,8 @@ import React from 'react'
 import Header from '../../components/Header'
 import Bottom from '../../components/Bottom'
 import { connect } from 'react-redux'
+import { ACTIVE, TITLE } from '../../redux/types'
+import { withRouter } from 'react-router-dom'
 
 class Main extends React.Component {
     constructor(props) {
@@ -9,15 +11,32 @@ class Main extends React.Component {
     }
     render() {
         return (
-            <div className="friends">
-                <Header title="联系人" />
+            <div className="main">
+                <Header title={this.props.title} />
                 {this.props.children}
-                <Bottom />
+                <Bottom active={this.props.active} changeActive={this.changeActive.bind(this)}/>
             </div>
         )
     }
     componentDidMount() {
         console.log(this.props);
+        
+    }
+    changeActive(active) {
+        this.props.setActive(active)
+        let title = ''
+        switch(active){
+            case 'information':
+                title = '消息'
+                break;
+            case 'friends':
+                title = '联系人'
+                break;
+            default:
+                title = '我的'
+        }
+        this.props.setTitle(title)
+        this.props.history.push(`/${active}`)
     }
 }
 
@@ -29,8 +48,19 @@ const mapStateToProps = (state, ownProps) => {
 }
 const mapDispatchToProps = (dispatch) => {
     return {
-
+        setActive(active) {
+            dispatch({
+                type: ACTIVE,
+                data: { active }
+            })
+        },
+        setTitle(title) {
+            dispatch({
+                type: TITLE,
+                data: { title }
+            })
+        }
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Main)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Main))

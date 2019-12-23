@@ -1,4 +1,4 @@
 export default {
-    title: '',
-    active: ''
+    title: '联系人',
+    active: 'friends'
 }

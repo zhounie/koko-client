@@ -1,0 +1,15 @@
+.chats {
+    .top {
+        height: 44px;
+        background: #fff;
+        width: 100%;
+    }
+    .main {
+        height: calc(100vh - 44px - 64px);
+        background: #F0F8FF;
+    }
+    .bottom {
+        height: 64px;
+        background: #E0EEFF;
+    }
+}
