@@ -1,0 +1,18 @@
+.header {
+    height: 44px;
+    background: #77CFFF;   
+    text-align: center;
+    line-height: 44px;
+    position: relative;
+    .title {
+        color: #fff;
+    }
+    .add_user {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        color: #fff;
+        font-size: 22px;
+    }
+}
