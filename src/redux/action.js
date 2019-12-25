@@ -1,4 +1,4 @@
-import { TITLE, ACTIVE } from './types'
+import { TITLE, ACTIVE, RECEIVE } from './types'
 
 export const changeTitle = (title) => {
     return {
@@ -11,5 +11,16 @@ export const changeActive = (active) => {
     return {
         type: ACTIVE,
         data: active
+    }
+}
+
+// {
+//     id: 1,
+//     message: '六六六'
+// }
+export const setReceiveMsg = (receiveMsg) => {
+    return {
+        type: RECEIVE,
+        data: receiveMsg
     }
 }

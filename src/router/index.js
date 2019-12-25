@@ -5,6 +5,7 @@ import friendsMaterial from '../pages/friendsMaterial'
 import information from '../pages/information'
 import mine from '../pages/mine'
 import Main from '../pages/main'
+import Login from '../pages/login'
 import { Switch, HashRouter, Route, BrowserRouter, Redirect } from 'react-router-dom'
 
 
@@ -12,6 +13,7 @@ const Router = () => {
     return (
         <BrowserRouter>
            <Switch>
+                <Route exact path="/login" component={Login} />
                 <Route exact path="/chats" component={chats} />
                 <Main>
                     <Route path="/friends" component={friends} />
