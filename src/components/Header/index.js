@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
+
 import './index.scss'
 class Header extends Component {
     constructor(props) {
@@ -14,10 +16,10 @@ class Header extends Component {
                 <span className="title">
                     {this.props.title}
                 </span>
-                <div className="add_user iconfont icon-add-account"></div>
+                <div className="add_user iconfont icon-add-account" onClick={()=>this.props.history.push(`/findFriend`)}></div>
             </div>
         )
     }
 }
 
-export default Header
+export default withRouter(Header)

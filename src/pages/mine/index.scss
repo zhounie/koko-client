@@ -1,0 +1,60 @@
+.mine {
+    .head {
+        height: 216px;
+        position: relative;
+        background: #000;
+        background: #fafafa;
+        .head_box {
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+            display: flex;
+        }
+        img {
+            width: 72px;
+            border-radius: 50%;
+        }
+        h4 {
+            line-height: 72px;
+            font-size: 18px;
+            padding-left: 16px;
+        }
+    }
+    ul {
+        li {
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 12px;
+            font-size: 14px;
+            span {
+                color: #B0B0B0;
+            }
+        }
+    }
+    .friend_btn {
+        position: fixed;
+        bottom: 50px;
+        height: 44px;
+        padding: 6px 12px;
+        box-sizing: border-box;
+        display: flex;
+        width: 100%;
+        button {
+            flex: 1;
+            display: block;
+            height: 100%;
+            border: none;
+            background-color: #E4F5FF;
+            outline: none;
+            border-radius: 4px;
+        }
+        button:active {
+            background: rgb(242, 250, 255);
+        }
+        button:not(:last-child) {
+            margin-right: 6px;
+        }
+    }
+}

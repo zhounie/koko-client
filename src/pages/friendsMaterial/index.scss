@@ -1,0 +1,65 @@
+.friend_material {
+    .add_friend_head {
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        position: relative;
+        i {
+            position: absolute;
+            left: 4px;
+            font-size: 24px;
+            z-index: 1;
+        }
+    }
+    .head {
+        height: 216px;
+        text-align: center;
+        img {
+            width: 70px;
+            border-radius: 50%;
+            margin-top: 74px;
+        }
+        h4 {
+            padding-top: 10px;
+        }
+    }
+    .material {
+        div {
+            line-height: 50px;
+            i {
+                font-size: 20px;
+                vertical-align: middle;
+                padding-left: 12px;
+                padding-right: 4px;
+            }
+            span {
+                font-size: 14px;
+                vertical-align: middle;
+            }
+        }
+    }
+    .friend_btn {
+        position: fixed;
+        bottom: 0;
+        height: 44px;
+        padding: 6px 12px;
+        box-sizing: border-box;
+        display: flex;
+        width: 100%;
+        button {
+            flex: 1;
+            display: block;
+            height: 100%;
+            border: none;
+            background-color: #E4F5FF;
+            outline: none;
+            border-radius: 4px;
+        }
+        button:active {
+            background: rgb(242, 250, 255);
+        }
+        button:not(:last-child) {
+            margin-right: 6px;
+        }
+    }
+}

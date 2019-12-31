@@ -1,6 +1,7 @@
 import React from 'react'
 import './index.scss'
 import { login } from '../../api/index'
+import { friendRequest } from '../../api/friend'
 import { withRouter } from 'react-router-dom'
 
 class Login extends React.Component {
@@ -45,7 +46,12 @@ class Login extends React.Component {
         let res = await login(params)
         if (res.code === 200) {
             localStorage.setItem('user', JSON.stringify(res.data))
-            this.props.history.replace('/chats')
+            friendRequest({userId: res.data.id}).then(res => {
+                if(res.code === 200) {
+                    localStorage.setItem('friendRequest', JSON.stringify(res.data))
+                    this.props.history.replace('/friends')
+                }
+            })
         }
     }
 }

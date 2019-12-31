@@ -1,0 +1,67 @@
+.friends {
+    height: calc(100vh - 44px);
+    background: #FAFAFA;
+    .friend_request {
+        margin-bottom: 10px;
+        background: #fff;
+        .user_item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 12px;
+            .request_msg {
+                display: flex;
+            }
+            .user_head{
+                padding-right: 6px;
+                img {
+                    width: 44px;
+                    border-radius: 50%;
+                }
+            }
+            .user_msg{
+                h4 {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+                span {
+                    font-size: 12px;
+                    color: #7B7B7B;
+                }
+            }
+            .agree_btn {
+                button {
+                    background: #77CFFF;
+                    border: none;
+                    color: #fff;
+                    padding: 4px 10px;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+    .user_box {
+        background: #fff;
+        .user_item {
+            display: flex;
+            padding: 10px 12px;
+            .user_head{
+                padding-right: 6px;
+                img {
+                    width: 44px;
+                    border-radius: 50%;
+                }
+            }
+            .user_msg{
+                h4 {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+                span {
+                    font-size: 12px;
+                    color: #7B7B7B;
+                }
+            }
+        }
+    }
+}

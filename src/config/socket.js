@@ -4,7 +4,7 @@ import { RECEIVE } from '../redux/types'
 
 
 const socket = () => {
-    let user = JSON.parse(localStorage.getItem('user'))
+    let user = JSON.parse(localStorage.getItem('user')||'{}')
     let socket = IO.connect(`http://localhost:3000?userName=${user.userName}&userId=${user.id}`)
     
     socket.on('receive', (msg) => {
